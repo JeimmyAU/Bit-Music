@@ -20,6 +20,11 @@ var api = express.Router(); // cargamos el manejador de rutas de Express
 // Por cada función que vayamos a crear debe existir una ruta
 // post('una ruta de acceso', una función a ejecutar)
 api.post('/registro', UsuarioControl.crearUsuario);
+// En el caso del login, en una API es un proceso especial y que no guarda los datos en BD
+// sino que realiza un paneo o scan del modelo para la coincidencia de datos
+api.post('/loginUsuario', UsuarioControl.login);
+// PUT y DELETE es que necesitan tener especificados el id en la ruta
+api.put('/actualizar-usuario/:id', UsuarioControl.actualizarUsuario);
 
 module.exports = api ; // 
 // MVW -> Modelo Vista Cualquiera / Model View Whatever (modelo, vista rutas)
