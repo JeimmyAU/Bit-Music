@@ -3,7 +3,6 @@
     Declaración de rutas, uso de la librería body-parser
     Permisos de acceso a cualquier cliente (Permisos a Angular)
 */
-
 const express = require('express'); // Importamos Express
 const bodyParser = require('body-parser'); // Permite analizar datos de URL
 
